@@ -1,0 +1,12 @@
+{
+    "extends": ["webpack"],
+    "rules": {
+        "linebreak-style": ["error", "windows"],
+        // "no-console": "off"
+        "no-console": [
+            "warn",
+            { "allow": ["clear", "info", "error", "dir", "trace", "log"] }
+        ],
+        "semi":"off"
+    }
+}
