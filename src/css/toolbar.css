@@ -1,0 +1,10 @@
+.excel__toolbar {
+  @apply absolute flex 
+    left-0 right-0 top-toolbar
+    px-2.5 py-2 h-10
+    border-b border-solid border-gray;
+}
+
+.excel__toolbar .button {
+  @apply btn active:text-green-600;
+}

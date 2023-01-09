@@ -23,9 +23,10 @@ function cssLoaders() {
         loader: "postcss-loader",
         options: {
             postcssOptions: {
-                plugins:{
+                plugins: {
+                    "postcss-import": {},
                     tailwindcss: {},
-                    autoprefixer: {},  
+                    autoprefixer: {},
                 }
             }
         }
@@ -37,7 +38,7 @@ function cssLoaders() {
         postcssLoader,
     ]
 
-    if ( isProd ) {
+    if (isProd) {
         postcssLoader.options.postcssOptions.plugins.cssnano = { present: 'default' }
     }
 
