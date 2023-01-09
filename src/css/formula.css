@@ -1,0 +1,15 @@
+.excel__formula {
+  @apply absolute flex items-center
+    left-0 right-0 top-formula h-6
+    border-b border-solid border-gray;
+}
+
+.excel__formula .info {
+  @apply min-w-info
+    text-lg leading-6 text-center italic 
+    border-b border-r border-solid border-gray;
+}
+
+.excel__formula .input {
+  @apply p-1 text-xs w-full h-full outline-none;
+}

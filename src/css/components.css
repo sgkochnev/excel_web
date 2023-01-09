@@ -1,0 +1,119 @@
+/* vars */
+:root {
+  --h-header: 2.125rem; /* 34px */
+  --h-toolbar: 2.5rem; /* 40px */
+  --h-formula: 1.5rem; /* 24px */
+  --h-row: 1.5rem; /* 24px */
+  --w-cell: 7.5rem; /* 120px */
+  --min-w-info: 2.5rem; /* 40px */
+  --min-w-cell: 2.5rem; /* 40px */
+  --min-h-row: 1.25rem; /* 18px */
+  --fx-size: 1.125rem; /* 18px */
+  --h-db-header: 4rem; /* 64px* */
+
+  --main-color-text: #888888;
+  --bg-cell: #f8f9fa;
+  --border-color-cell: #e2e3e3;
+  --border-color: #c0c0c0;
+  --shadow-db-header: #3c404326;
+}
+
+@layer base {
+  html {
+    font-family: Roboto, Georgia, Cambria;
+    /* font-size: 12px; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  /* general */
+
+  .border-gray {
+    @apply border-[var(--border-color)];
+  }
+
+  .color-text {
+    @apply text-[var(--main-color-text)];
+  }
+
+  /* excel header */
+
+  .h-header {
+    @apply h-[var(--h-header)];
+  }
+
+  /* excel toolbar */
+
+  .top-toolbar {
+    @apply top-[var(--h-header)];
+  }
+
+  /* excel formula */
+
+  .top-formula {
+    @apply top-[calc(var(--h-header)+var(--h-toolbar))];
+  }
+
+  .min-w-info {
+    @apply min-w-[var(--min-w-info)];
+  }
+
+  /* table*/
+
+  .top-table {
+    @apply top-[calc(var(--h-header)+var(--h-toolbar)+var(--h-formula))];
+  }
+
+  .h-row {
+    @apply h-[var(--h-row)];
+  }
+
+  .min-h-row {
+    @apply min-h-[var(--min-h-row)];
+  }
+
+  .w-cell {
+    @apply w-[var(--w-cell)];
+  }
+
+  .min-w-cell {
+    @apply min-w-[var(--min-w-cell)];
+  }
+
+  .bg-cell {
+    @apply bg-[var(--bg-cell)];
+  }
+
+  .border-gray-for-cell {
+    @apply border-[var(--border-color-cell)];
+  }
+
+  /* Dashboard */
+
+  .h-db-header {
+    @apply h-[var(--h-db-header)];
+  }
+
+  .shadow-db-header {
+    @apply shadow-[var(--shadow-db-header)];
+  }
+
+  /* Mixin */
+
+  .btn {
+    @apply h-6 text-center relative inline-block 
+            text-[#000000b3] min-w-[1.5rem] p-[3px]
+            hover:bg-[#eee] hover:cursor-pointer;
+  }
+
+  .btn span {
+    @apply text-[1.125rem];
+  }
+
+  .clear-list {
+    @apply m-0 p-0 list-none;
+  }
+}

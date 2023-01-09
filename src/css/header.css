@@ -1,0 +1,20 @@
+.excel__header {
+  @apply absolute 
+    flex justify-between 
+    top-0 left-0 right-0 
+    h-header px-1 py-2 
+    border-b border-solid border-gray;
+}
+
+.excel__header .input {
+  @apply h-5 min-w-min px-2 py-0.5
+    text-gray-700 text-lg outline-none
+    border-solid border-transparent border-2 rounded-sm
+    hover:focus:border-2 hover:focus:border-solid 
+    focus:border-blue-600 hover:border-gray;
+        
+}
+
+.excel__header .button {
+  @apply btn active:text-red-600;
+}

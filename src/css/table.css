@@ -1,0 +1,39 @@
+.excel__table {
+  @apply absolute 
+    left-0 right-0 
+    top-table pb-0.5;
+}
+
+.excel__table .row {
+  @apply flex flex-row 
+    min-h-row h-row;
+}
+
+.excel__table .row-info {
+  @apply flex justify-center items-center 
+    border-b border-r border-solid border-gray
+    h-full min-w-info bg-cell;
+}
+
+.excel__table .row-data {
+  @apply flex;
+}
+
+.excel__table .column {
+  @apply flex justify-center items-center  
+    w-cell h-full min-w-cell bg-cell
+    border-solid border-gray border-r border-b;
+}
+
+.excel__table .cell {
+  @apply pl-1 pr-1 min-w-cell w-cell h-full
+    text-gray-900 whitespace-nowrap 
+    border-b border-r border-solid border-gray-for-cell
+    outline-none outline-offset-0;
+}
+
+.excel__table .selected {
+  @apply border-none rounded-sm
+    outline-2 outline-blue-500 
+    z-10;
+}
