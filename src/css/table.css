@@ -1,5 +1,5 @@
 .excel__table {
-  @apply absolute 
+  @apply absolute overflow-auto
     left-0 right-0 
     top-table pb-0.5;
 }
@@ -27,7 +27,7 @@
 
 .excel__table .cell {
   @apply pl-1 pr-1 min-w-cell w-cell h-full
-    text-gray-900 whitespace-nowrap 
+    text-gray-900 whitespace-nowrap rounded-sm
     border-b border-r border-solid border-gray-for-cell
     outline-none outline-offset-0;
 }
