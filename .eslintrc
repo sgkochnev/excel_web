@@ -2,11 +2,17 @@
     "extends": ["webpack"],
     "rules": {
         "linebreak-style": ["error", "windows"],
-        // "no-console": "off"
         "no-console": [
             "warn",
             { "allow": ["clear", "info", "error", "dir", "trace", "log"] }
         ],
-        "semi":"off"
+        "semi": "off",
+        "no-undef": "off",
+        "class-methods-use-this": "off",
+        "arrow-parens": "off",
+        "no-param-reassign": "off"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2022
     }
 }
