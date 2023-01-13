@@ -10,8 +10,8 @@
 }
 
 .excel__table .row-info {
-  @apply flex justify-center items-center 
-    border-b border-r border-solid border-gray
+  @apply relative flex justify-center items-center 
+    border-b border-r border-solid border-gray select-none
     h-full min-w-info bg-cell;
 }
 
@@ -20,8 +20,8 @@
 }
 
 .excel__table .column {
-  @apply flex justify-center items-center  
-    w-cell h-full min-w-cell bg-cell
+  @apply relative flex justify-center items-center  
+    w-cell h-full min-w-cell bg-cell select-none
     border-solid border-gray border-r border-b;
 }
 
@@ -36,4 +36,16 @@
   @apply border-none rounded-sm
     outline-2 outline-blue-500 
     z-10;
+}
+
+.excel__table .col-resize {
+  @apply resizable 
+    top-0 bottom-0 right-0 w-1
+    cursor-col-resize;
+}
+
+.excel__table .row-resize {
+  @apply resizable
+    left-0 bottom-0 right-0 h-1
+    cursor-row-resize
 }
