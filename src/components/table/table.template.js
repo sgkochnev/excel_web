@@ -4,9 +4,9 @@ const CODES = {
 }
 
 
-function toCell(colIndex = '', rowIndex = 0) {
+function toCell([colIndex = '', rowIndex = 0]) {
   return `
-    <div class="cell" contenteditable="" data-col="${colIndex}" data-row="${rowIndex}"></div>
+    <div class="cell" contenteditable="" data-col="${colIndex}" data-row="${rowIndex}" data-cell="${colIndex}${rowIndex}"></div>
   `
 }
 
@@ -44,7 +44,7 @@ export default function createTable(rowsCount = 26, colsCount = 55) {
     const cells = new Array(colsCount)
       .fill('')
       .map(toColumnName)
-      // .map((el) => el + i)
+      .map((el) => [el, i])
       .map(toCell)
       .join('')
 
