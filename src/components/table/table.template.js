@@ -4,10 +4,16 @@ const CODES = {
 }
 
 
-function toCell([colIndex = '', rowIndex = 0]) {
-  return `
-    <div class="cell" contenteditable="" data-col="${colIndex}" data-row="${rowIndex}" data-cell="${colIndex}${rowIndex}"></div>
-  `
+function toCell(rowIndex) {
+  return (_, colIndex) => {
+    const colName = toColumnName(_, colIndex)
+    return `<div class="cell" contenteditable="" 
+      data-col="${colName}" 
+      data-row="${rowIndex}" 
+      data-cell="${colName}:${rowIndex}"
+      data-index="${colIndex + 1}:${rowIndex}"
+    ></div>`
+  }
 }
 
 function toColumn(colName) {
@@ -43,9 +49,7 @@ export default function createTable(rowsCount = 26, colsCount = 55) {
   const toTable = (_, i) => {
     const cells = new Array(colsCount)
       .fill('')
-      .map(toColumnName)
-      .map((el) => [el, i])
-      .map(toCell)
+      .map(toCell(i))
       .join('')
 
     return i !== 0 ? toRow(cells, i) : toRow(cols, null)

@@ -1,4 +1,4 @@
-import toTitle from './utils'
+import { toTitle } from './utils'
 
 export default class DOMListener {
   constructor($root, listeners = []) {
