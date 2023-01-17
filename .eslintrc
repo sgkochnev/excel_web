@@ -10,7 +10,9 @@
         "no-undef": "off",
         "class-methods-use-this": "off",
         "arrow-parens": "off",
-        "no-param-reassign": "off"
+        "no-param-reassign": "off",
+        "func-names": "off",
+        "no-plusplus": "off"
     },
     "parserOptions": {
         "ecmaVersion": 2022
