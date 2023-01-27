@@ -12,7 +12,7 @@ class DOM {
   }
 
   text(text) {
-    if (typeof text === 'string') {
+    if (typeof text !== 'undefined') {
       this.$el.textContent = text
       return this
     }
@@ -71,9 +71,16 @@ class DOM {
   css(styles = {}) {
     Object.entries(styles)
       .forEach(([k, v]) => {
-        this.$el.style[k] = v;
+        this.style[k] = v;
       })
     return this
+  }
+
+  getStyles(styles = []) {
+    return styles.reduce((res, s) => {
+      res[s] = this.style[s]
+      return res
+    }, {})
   }
 
   findAll(selector) {
@@ -93,6 +100,14 @@ class DOM {
     return this.$el.forEach(callback)
   }
 
+  attr(name, value) {
+    if (value) {
+      this.$el.setAttribute(name, value)
+      return this
+    }
+    return this.$el.getAttribute(name)
+  }
+
   id(parse) {
     if (parse) {
       const parsed = this.id().split(':')
@@ -102,6 +117,10 @@ class DOM {
       }
     }
     return this.data.index
+  }
+
+  isNull() {
+    return this.$el === null
   }
 }
 

@@ -8,3 +8,7 @@
 .excel__toolbar .button {
   @apply btn active:text-green-600;
 }
+
+.excel__toolbar .active {
+  @apply  text-green-600;
+}

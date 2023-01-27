@@ -12,7 +12,10 @@
         "arrow-parens": "off",
         "no-param-reassign": "off",
         "func-names": "off",
-        "no-plusplus": "off"
+        "no-plusplus": "off",
+        "import/prefer-default-export": "off",
+        "no-eval": "off",
+        "no-debugger":"off",
     },
     "parserOptions": {
         "ecmaVersion": 2022
