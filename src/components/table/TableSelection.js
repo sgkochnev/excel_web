@@ -38,6 +38,14 @@ export default class TableSelection {
     )
     this.group.forEach(el => el.classList.add(TableSelection.className))
   }
+
+  applyStyle(style) {
+    this.group.forEach($el => $el.css(style))
+  }
+
+  get selectedIDs() {
+    return this.group.map($el => $el.id())
+  }
 }
 
 function getArrayCellIDs(start = {}, end = {}) {
