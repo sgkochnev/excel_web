@@ -16,6 +16,8 @@
         "import/prefer-default-export": "off",
         "no-eval": "off",
         "no-debugger":"off",
+        "no-new":"off",
+        "no-alert":"off"
     },
     "parserOptions": {
         "ecmaVersion": 2022

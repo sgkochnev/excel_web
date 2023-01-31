@@ -1,3 +1,4 @@
+const webpack = require('webpack')
 const CopyPlugin = require('copy-webpack-plugin')
 const ESLintWebpackPlugin = require('eslint-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -97,6 +98,9 @@ module.exports = {
             filename: filename('css'),
         }),
 
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+        })
     ],
 
     module: {
