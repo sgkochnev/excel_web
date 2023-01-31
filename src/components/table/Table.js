@@ -49,8 +49,6 @@ export default class Table extends ExcelComponent {
         ids: this.selection.selectedIDs,
       }))
     })
-
-    // this.$subscribe(state => console.log('TableState', state))
   }
 
   toHTML() {
@@ -83,7 +81,7 @@ export default class Table extends ExcelComponent {
       const data = await resize(event, this.$root)
       this.$dispatch(tableResize(data))
     } catch (error) {
-      console.log('Resize error: ', error.message)
+      console.error('Resize error: ', error.message)
     }
   }
 
