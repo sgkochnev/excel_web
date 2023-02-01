@@ -8,6 +8,7 @@
 @import "./formula.css";
 @import "./table.css";
 @import "./dashboard.css";
+@import "./loader.css";
 
 @tailwind base;
 @tailwind components;
